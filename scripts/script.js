@@ -30,7 +30,10 @@ for (n = 0; n < clickMenuButton.length; n++) {
   clickMenuButton[n].addEventListener("click", closeHamburger);
 }
 
+
 openHamburgerButton.addEventListener("click", openHamburger);
 closeHamburgerButton.addEventListener("click", closeHamburger);
 hamburger.addEventListener("click", closeHamburgerOverlay);
 window.addEventListener("keyup", closeHamburgerEsc);
+
+
