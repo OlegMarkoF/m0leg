@@ -21,6 +21,7 @@
 .hamburger__box {
   margin: 0;
   padding: 0;
+  padding-bottom: 40px;
   max-width: 200px;
   width: 50%;
   display: flex;
@@ -39,7 +40,7 @@
 
 .service-button {
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 18px;
   line-height: 18px;
   letter-spacing: 0.02em;
@@ -68,18 +69,19 @@
   width: 30px;
   height: 30px;
   display: none;
+  z-index: 5;
 }
 
 .hamburger__close-menu {
   background: url(../images/Close.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   margin: 16px 15px;
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 150px;
+  top: 0;
   /* transition: opacity 0.5s ease-in-out; */
   /* opacity: 1; */
 }

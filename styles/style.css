@@ -390,6 +390,9 @@ p {
   .footer_border {
     margin: 20px auto;
   }
+  .projects_item:nth-last-child(-n+2) {
+    display: none;
+  }
 }
 @media screen and (max-width: 950px) {
   .about {
@@ -453,4 +456,5 @@ p {
   .stack_list {
     gap: 30px 50px;
   }
+  
 }
