@@ -197,7 +197,8 @@ p {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 48px;
+  text-wrap: nowrap;
   color: rgba(66, 68, 110, 1);
 }
 
@@ -427,12 +428,17 @@ p {
     margin-top: 60px;
     gap: 30px;
   }
+  .lang {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+  }
 }
 
 @media screen and (max-width: 650px) {
   .hello {
     width: 100%;
-    /* font-weight: 400; */
+    font-size: 48px;
   }
 
   .footer_logo {
@@ -444,6 +450,14 @@ p {
 
   .phone {
     text-wrap: nowrap;
+  }
+  .stack_title {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 35px;
+  }
+  .stack_text {
+    font-size: 25px;
   }
 }
 
