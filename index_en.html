@@ -12,7 +12,7 @@
 
 <body>
   <div class="page">
-    <header class="header">
+    <header class="header" id="home">
       <button class="hamburger-menu"></button>
       <div class="logo">
         <p class="text_logo">{Oleg Markov}</p>
@@ -21,11 +21,11 @@
       </div>
       <div class="header_links">
         <nav class="nav">
-          <a class="link" href="#home">Home</a>
+          <!-- <a class="link" href="#home">Home</a> -->
           <a class="link" href="#about">About</a>
           <a class="link" href="#tech_stack">Tech Stack</a>
           <a class="link" href="#projects">Projects</a>
-          <a class="link" href="#contact">Contact</a>
+          <a class="link contacts__link">Contacts</a>
           <div class="social_network">
             <a class="link" href="https://github.com/OlegMarkoF" target="_blank">
               <img src="./images/git.svg" alt="GitHub" />
@@ -45,7 +45,7 @@
     <main class="main">
       <section class="about" id="about">
         <h1 class="hello">
-          Hi 👋,<br />
+          Hi <img src="./images/Hi.gif" alt="hi" height="50px">,<br />
           My name is <br />
           <span>Oleg Markov</span> <br />
           build things for web
@@ -269,31 +269,7 @@
         </ul>
       </section>
 
-      <!-- Hamburger menu -->
-      <section class="hamburger">
-        <div class="hamburger__box">
-          <a class="lang" href="./index.html" title="Switch to Russian language">Ru</a>
-          <button class="hamburger-menu hamburger__close-menu"></button>
-          <nav class="hamburger__button__group">
-            <a class="link service-button" href="#home">Home</a>
-            <a class="link service-button" href="#about">About</a>
-            <a class="link service-button" href="#tech_stack">Tech Stack</a>
-            <a class="link service-button" href="#projects">Projects</a>
-            <a class="link service-button" href="#contact">Contact</a>
-          </nav>
-          <div class="social_network">
-            <a class="link service-button" href="https://github.com/OlegMarkoF" target="_blank">
-              <img src="./images/git.svg" alt="GitHub" />
-            </a>
-            <a class="link service-button" href="https://t.me/Markov0leg" target="_blank">
-              <img src="./images/телеграм.svg" alt="Telegram" />
-            </a>
-            <a class="link service-button" href="https://www.linkedin.com/in/oleg-markov/" target="_blank">
-              <img src="./images/in.svg" alt="LinkedIn" />
-            </a>
-          </div>
-        </div>
-      </section>
+      
     </main>
 
     <footer class="footer">
@@ -304,8 +280,8 @@
           <!-- <img src="./images/я(чб).svg" alt="logo" /> -->
         </div>
         <article class="footer_contacts_links">
-          <a class="phone" href="tel:+79179406963">+7 917 940 6963</a>
-          <a href="mailto:o.mark@mail.ru" target="_blank">o.mark@mail.ru</a>
+          <!-- <a class="phone" href="tel:+79179406963">+7 917 940 6963</a>
+          <a href="mailto:o.mark@mail.ru" target="_blank">o.mark@mail.ru</a> -->
           <div class="social_network">
             <a class="link" href="https://github.com/OlegMarkoF" target="_blank">
               <img src="./images/footer/github.svg" alt="GitHub" />
@@ -328,7 +304,7 @@
           <a class="link" href="#about">About</a>
           <a class="link" href="#tech_stack">Technologies</a>
           <a class="link" href="#projects">Projects</a>
-          <a class="link" href="#contact">Contact</a>
+          <a class="link contacts__link">Contacts</a>
         </nav>
         <p class="author">
           Designed and built by <span>Oleg Markov</span> with <span>Love</span> &
@@ -336,6 +312,54 @@
         </p>
       </section>
     </footer>
+
+    <!-- Hamburger menu -->
+    <section class="hamburger">
+      <div class="hamburger__box">
+        <a class="lang" href="./index.html" title="Switch to Russian language">Ru</a>
+        <button class="hamburger-menu hamburger__close-menu"></button>
+        <nav class="hamburger__button__group">
+          <a class="link service-button" href="#home">Home</a>
+          <a class="link service-button" href="#about">About</a>
+          <a class="link service-button" href="#tech_stack">Tech Stack</a>
+          <a class="link service-button" href="#projects">Projects</a>
+          <a class="link service-button contacts__link">Contacts</a>
+        </nav>
+        <div class="social_network">
+          <a class="link service-button" href="https://github.com/OlegMarkoF" target="_blank">
+            <img src="./images/git.svg" alt="GitHub" />
+          </a>
+          <a class="link service-button" href="https://t.me/Markov0leg" target="_blank">
+            <img src="./images/телеграм.svg" alt="Telegram" />
+          </a>
+          <a class="link service-button" href="https://www.linkedin.com/in/oleg-markov/" target="_blank">
+            <img src="./images/in.svg" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Модальное окно контактов -->
+    <div class="popup">
+      <div class="contacts">
+        <div class="contacts__block">
+          <p>Сall me</p>
+          <a class="phone popup__contact" href="tel:+79179406963" target="_blank">+7 917 940 6963</a>
+        </div>
+
+        <div class="popup__border"></div>
+        <div class="contacts__block">
+          <p>Write to me</p>
+          <a class="popup__contact" href="mailto:o.mark@mail.ru" target="_blank">o.mark@mail.ru</a>
+          <a class="link popup__contact_img" href="https://t.me/Markov0leg" target="_blank">
+            <img src="./images/footer/телеграм.svg" alt="Telegram" style="height: 100%;" />
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+
   </div>
   <script src="./scripts/script.js"></script>
 </body>

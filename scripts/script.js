@@ -1,39 +1,82 @@
 // Открытие/закрытие гамбургер меню
 const hamburger = document.querySelector(".hamburger");
+const popup = document.querySelector(".popup");
 const openHamburgerButton = document.querySelector(".hamburger-menu");
 const closeHamburgerButton = document.querySelector(".hamburger__close-menu");
 const clickMenuButton = document.getElementsByClassName("service-button");
+const contactsLink = document.querySelectorAll(".contacts__link");
 
+// Гамбургер меню
 const openHamburger = () => {
   hamburger.classList.add("hamburger_opened");
 };
 const closeHamburger = () => {
   hamburger.classList.remove("hamburger_opened");
 };
-function closeHamburgerEsc(evt) {
+
+
+// Открыть попап
+const openPopup = () => {
+  popup.classList.add("popup_opened");
+};
+const closePopup = () => {
+  popup.classList.remove("popup_opened");
+}
+
+// Закрыть модальные окна
+function closeModalByEsc(evt) {
   if (evt.key === "Escape") {
-    closeHamburger();
+    if (hamburger.classList.contains("hamburger_opened") === true) {
+      closeHamburger();
+    }
+    if (popup.classList.contains("popup_opened") === true) {
+      closePopup();
+    }
   }
 }
+
 function closeHamburgerClickButton(evt) {
   if (evt.key === "click") {
     closeHamburger();
   }
 }
-function closeHamburgerOverlay(evt) {
+
+// function closePopupClickButton(evt) { <-- Включить эту функцию если будет нужен крестик для закрытия окна
+//   if (evt.key === "click") {
+//     closePopup();
+//   }
+// }
+
+function closeMadalByOverlay(evt) {
   if (evt.target === evt.currentTarget) {
-    closeHamburger();
+    if (hamburger.classList.contains("hamburger_opened") === true) {
+      closeHamburger();
+    }
+    if (popup.classList.contains("popup_opened") === true) {
+      closePopup();
+    }
   }
 }
-let n;
-for (n = 0; n < clickMenuButton.length; n++) {
-  clickMenuButton[n].addEventListener("click", closeHamburger);
-}
+// function closePopupOverlay(evt) {
+//   if (evt.target === evt.currentTarget) {
+//     closePopup();
+//   }
+// }
 
+let i;
 
 openHamburgerButton.addEventListener("click", openHamburger);
+for (i = 0; i < clickMenuButton.length; i++) {
+  clickMenuButton[i].addEventListener("click", closeHamburger);
+}
+
+// Закрытие модальных окон
+for (i = 0; i < contactsLink.length; i++) {
+  contactsLink[i].addEventListener("click", openPopup);
+}
 closeHamburgerButton.addEventListener("click", closeHamburger);
-hamburger.addEventListener("click", closeHamburgerOverlay);
-window.addEventListener("keyup", closeHamburgerEsc);
+hamburger.addEventListener("click", closeMadalByOverlay);
+popup.addEventListener("click", closeMadalByOverlay);
+window.addEventListener("keyup", closeModalByEsc);
 
 
